@@ -1,0 +1,600 @@
+*{
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+$pink: rgb(255, 0, 170);
+$black: rgb(26, 26, 26);
+$light-gray: rgb(233, 233, 233);
+$medium-gray: rgb(151, 151, 151);
+$gray: rgb(90, 90, 90);
+$orange: rgb(255, 118, 84);
+$gradient: linear-gradient(75deg, rgb(240, 116, 137), rgb(255, 118, 84), rgb(205, 229, 166));
+
+.displayFlex{
+    display: flex;
+}
+
+header {
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+        width: 55%;
+    }
+
+    i {
+        font-size: 40px;
+        color: gray;
+    }
+}
+
+button {
+    width: 50%;
+    height: 100px;
+    background: linear-gradient(#fff, #fff) padding-box, $gradient border-box;
+    color: #313149;
+    padding: 10px;
+    border: 6px solid transparent;
+    border-radius: 75px;
+    display: inline-block;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+button:hover, a:hover{
+    cursor: pointer;
+    color: $medium-gray;
+}
+
+i:hover{
+    cursor: pointer;
+    color: $gray;
+}
+
+.relative {
+    position: relative;
+}
+
+.imagePosition {
+    position: absolute;
+    width: 100%;
+    top: -30px;
+    right: -280px;
+}
+
+.pink {
+    color: $pink;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 25px;
+}
+
+.gray {
+    color: $gray;
+}
+
+header, section, footer {
+    padding: 40px;
+}
+
+#section1, #section4 {
+    h6 {
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    h1 {
+        font-size: 72px;
+        font-weight: 900;
+        margin: 20px 0;
+        width: 90%;
+    }
+
+    p {
+        width: 86%;
+    }
+
+    button {
+        margin-bottom: 50px;
+    }
+}
+
+#section2 {
+    h2 {
+        padding-top: 50px;
+    }
+
+    background-image: url("assets/images/background.svg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: -1200px;
+}
+
+h2 {
+    font-size: 60px;
+    font-weight: 450;
+}
+
+p {
+    font-size: 30px;
+    line-height: 45px;
+}
+
+.displayGrid{
+    display: grid;
+}
+
+.grid-col-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: auto;
+}
+
+.section3-grid {
+    gap: 20px; 
+}
+
+.underline {
+    text-decoration: underline;
+    font-weight: 500;
+    text-decoration-skip-ink: none;
+}
+
+.card {
+    background-color: $light-gray;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-bottom: 15px;
+}
+
+.self-align-left{
+    justify-self: left;
+}
+
+.self-align-right{
+    justify-self: right;
+}
+
+.padding-left-5 {
+    padding-left: 5px;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+#section3 {
+    height: 150vh;
+    border-bottom: 2px solid $light-gray;
+}
+
+#section4 {
+    h1 {
+        width: 75%;
+    }
+
+    p {
+        width: 57%;
+    }
+
+    border-bottom: 2px solid $light-gray;
+}
+
+.spaceBetween{
+    justify-content: space-between;
+}
+
+@media screen and (max-width:576px) {
+    .hideOnMobile{
+        display: none;
+    }
+    
+    .mobile-align-right{
+        justify-self: right;
+        align-self: center;
+    }
+
+    .mobileDisplayGrid{
+        display: grid;
+    }
+
+    .mobileWidth80 {
+        width: 80%;
+    }
+
+    .mobileWidth100 {
+        width: 100%;
+    }
+
+    .nft-pos {
+        position: absolute;
+        width: 100%;
+    }
+    
+    .nft-pos-2 {
+        position: absolute;
+        width: 100%;
+        right: -450px;
+    }
+
+    .nft-orange {
+        color: $orange;
+        font-size: 16px;
+        padding: 0 20px;
+        margin: 0;
+    }
+    
+    .nft-gray-small {
+        color: $gray;
+        font-size: 16px;
+        padding: 0 20px;
+        margin: 0;
+    }
+    
+    .nft-gray-big {
+        color: $gray;
+        font-size: 22px;
+        padding: 0 20px;
+        margin: 0;
+    }
+    
+    .nft-black {
+        color: $black;
+        font-size: 25px;
+        padding: 0 20px;
+        margin: 0;
+        font-weight: 500;
+    }
+
+    footer {
+        img{
+            margin-top: 30px;
+            width: 50%;
+        }
+    
+        p {
+            font-size: 26px;
+            color: $gray;
+        }
+    
+        i {
+            font-size: 22px;
+            color: $medium-gray;
+            padding-right: 15px;
+            margin-bottom: 30px;
+        }
+    
+        h6 {
+            font-size: 22px;
+            color: $gray;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+    
+        a {
+            font-size: 22px;
+            color: $gray;
+            margin-bottom: 15px;
+            text-decoration: none;
+        }
+    
+        h5 {
+            font-size: 25px;
+            color: $medium-gray;
+            margin-bottom: 70px;
+            letter-spacing: 2px;
+            font-weight: 400;
+        }
+    }
+
+    .mobile-grid-col-2{
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+    }
+
+    .mobile-grid-col-2-90-10{
+        grid-template-columns: 90% 10%;
+        grid-auto-rows: auto;
+    }
+
+    .imagePosition {
+        position: absolute;
+        height: 86%;
+        width: max-content;
+        top: -10%;
+        left: -450%;
+    }
+
+    .imagePosition2 {
+        position: absolute;
+        height: 80%;
+        width: max-content;
+        left: -320%;
+        bottom: -0.1%;
+    }
+
+    #section4{
+        padding-bottom: 0;
+
+        button{
+            margin-bottom: 70px;
+        }
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .hideOnDesktop{
+        display: none;
+    }
+
+    header {
+        img {
+            width: 200px;
+        }
+    }
+
+    nav a {
+        text-decoration: none;
+        font-size: 25px;
+        padding-left: 25px;
+        color: $gray;
+    }
+
+    .pink {
+        color: $pink;
+        font-weight: normal;
+        letter-spacing: 2px;
+        font-size: 25px;
+    }
+
+    header, section, footer {
+        padding: 100px;
+    }
+
+    #section1{
+        h6 {
+            font-size: 17px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    
+        h1 {
+            font-size: 100px;
+            font-weight: 900;
+            margin: 20px 0;
+            width: 75%;
+        }
+    
+        p {
+            font-size: 21px;
+            width: 75%;
+            line-height: 30px;
+            margin-bottom: 30px;
+        }
+    
+        button {
+            margin-bottom: 75px;
+        }
+
+        margin-bottom: 150px;
+    }
+
+        button {
+            width: 25%;
+            height: 74px;
+            background: linear-gradient(#fff, #fff) padding-box,
+            $gradient border-box;
+            color: #313149;
+            padding: 10px;
+            border: 4px solid transparent;
+            border-radius: 75px;
+            display: inline-block;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        #section2 {
+            h2 {
+                padding-top: 20px;
+                margin-bottom: 20px;
+                font-size: 40px;
+            }
+
+            p {
+                margin-top: 0;
+                font-size: 22px;
+            }
+
+            padding: 120px 60px 40px;
+            
+            background-image: url("assets/images/background.svg");
+            background-repeat:no-repeat;
+            background-size:100%;
+            background-position: center;
+            margin: 0 100px;
+            border-radius: 20px;
+        }
+
+        .desktopDisplayFlex{
+            display: flex;
+        }
+
+        .flex-row {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        #section3{
+            h2{
+                font-size: 46px;
+                margin-top: 100px;
+                margin-bottom: 18px;
+            }
+
+            height: auto;
+            padding: 100px 0;
+            margin: 0 100px;
+        }
+
+        .p-sec3{
+            font-size: 23px;
+            margin-top: 0;
+        }
+
+        .nft-orange {
+            color: $orange;
+            font-size: 16px;
+            padding: 0 20px;
+            margin: 10px 0 0;
+            font-weight: bold;
+        }
+        
+        .nft-gray-small {
+            color: $medium-gray;
+            font-size: 16px;
+            padding: 0 20px;
+            margin: 10px 0 0;
+            font-weight: bold;
+        }
+        
+        .nft-gray-big {
+            color: $gray;
+            font-size: 20px;
+            padding: 0 20px;
+            margin: 0;
+        }
+        
+        .nft-black {
+            color: $black;
+            font-size: 22px;
+            padding: 0 20px;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .nft-black:first-of-type {
+            padding-left: 5px;
+        }
+        
+        .card {
+            background-color: $light-gray;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            padding-bottom: 15px;
+        }
+
+        #section4 {
+            h6 {
+                font-size: 17px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            h1 {
+                font-size: 62px;
+                font-weight: 900;
+                margin: 20px 0;
+                width: 90%;
+            }
+        
+            p {
+                font-size: 21px;
+                width: 75%;
+                line-height: 30px;
+                margin-bottom: 30px;
+            }
+        }
+
+        .imagePosition2 {
+            position: absolute;
+            width: 14%;
+            top: 134px;
+            right: 400px;
+        }
+
+        footer {
+            img{
+                margin-top: 30px;
+            }
+        
+            p {
+                font-size: 22px;
+                color: $gray;
+                margin-top: 10px;
+            }
+        
+            i {
+                font-size: 22px;
+                color: $medium-gray;
+                padding-right: 15px;
+                margin-bottom: 30px;
+            }
+        
+            h6 {
+                font-size: 22px;
+                color: $gray;
+                margin-bottom: 30px;
+                letter-spacing: 2px;
+            }
+        
+            a {
+                font-size: 22px;
+                color: $gray;
+                margin-bottom: 15px;
+                text-decoration: none;
+            }
+        
+            h5 {
+                font-size: 22px;
+                color: $medium-gray;
+                margin-bottom: 70px;
+                letter-spacing: 2px;
+                font-weight: 400;
+            }
+        }
+
+        .desktop-grid-col-4{
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            grid-auto-rows: auto;
+            gap: 30px;
+        }
+
+        #section4 {
+            padding: 100px 0 0;
+            margin: 0 100px;
+
+            button{
+                margin-bottom: 140px;
+            }
+        }
+
+        .desktopDisplayGrid{
+            display: grid;
+        }
+
+        .desktop-grid-col-2{
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: auto;
+        }
+
+        .imagePosition {
+            position: absolute;
+            height: 130%;
+            width: 130%;
+            top: -10%;
+            right: 0;
+        }
+
+        .imagePosition2 {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            right: 0;
+        }
+}

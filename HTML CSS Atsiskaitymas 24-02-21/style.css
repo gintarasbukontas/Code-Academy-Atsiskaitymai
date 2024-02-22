@@ -1,0 +1,511 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.displayFlex {
+  display: flex;
+}
+
+header {
+  justify-content: space-between;
+  align-items: center;
+}
+header img {
+  width: 55%;
+}
+header i {
+  font-size: 40px;
+  color: gray;
+}
+
+button {
+  width: 50%;
+  height: 100px;
+  background: linear-gradient(#fff, #fff) padding-box, linear-gradient(75deg, rgb(240, 116, 137), rgb(255, 118, 84), rgb(205, 229, 166)) border-box;
+  color: #313149;
+  padding: 10px;
+  border: 6px solid transparent;
+  border-radius: 75px;
+  display: inline-block;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+button:hover, a:hover {
+  cursor: pointer;
+  color: rgb(151, 151, 151);
+}
+
+i:hover {
+  cursor: pointer;
+  color: rgb(90, 90, 90);
+}
+
+.relative {
+  position: relative;
+}
+
+.imagePosition {
+  position: absolute;
+  width: 100%;
+  top: -30px;
+  right: -280px;
+}
+
+.pink {
+  color: rgb(255, 0, 170);
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 25px;
+}
+
+.gray {
+  color: rgb(90, 90, 90);
+}
+
+header, section, footer {
+  padding: 40px;
+}
+
+#section1 h6, #section4 h6 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+#section1 h1, #section4 h1 {
+  font-size: 72px;
+  font-weight: 900;
+  margin: 20px 0;
+  width: 90%;
+}
+#section1 p, #section4 p {
+  width: 86%;
+}
+#section1 button, #section4 button {
+  margin-bottom: 50px;
+}
+
+#section2 {
+  background-image: url("assets/images/background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -1200px;
+}
+#section2 h2 {
+  padding-top: 50px;
+}
+
+h2 {
+  font-size: 60px;
+  font-weight: 450;
+}
+
+p {
+  font-size: 30px;
+  line-height: 45px;
+}
+
+.displayGrid {
+  display: grid;
+}
+
+.grid-col-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: auto;
+}
+
+.section3-grid {
+  gap: 20px;
+}
+
+.underline {
+  text-decoration: underline;
+  font-weight: 500;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
+
+.card {
+  background-color: rgb(233, 233, 233);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-bottom: 15px;
+}
+
+.self-align-left {
+  justify-self: left;
+}
+
+.self-align-right {
+  justify-self: right;
+}
+
+.padding-left-5 {
+  padding-left: 5px;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+#section3 {
+  height: 150vh;
+  border-bottom: 2px solid rgb(233, 233, 233);
+}
+
+#section4 {
+  border-bottom: 2px solid rgb(233, 233, 233);
+}
+#section4 h1 {
+  width: 75%;
+}
+#section4 p {
+  width: 57%;
+}
+
+.spaceBetween {
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 576px) {
+  .hideOnMobile {
+    display: none;
+  }
+  .mobile-align-right {
+    justify-self: right;
+    align-self: center;
+  }
+  .mobileDisplayGrid {
+    display: grid;
+  }
+  .mobileWidth80 {
+    width: 80%;
+  }
+  .mobileWidth100 {
+    width: 100%;
+  }
+  .nft-pos {
+    position: absolute;
+    width: 100%;
+  }
+  .nft-pos-2 {
+    position: absolute;
+    width: 100%;
+    right: -450px;
+  }
+  .nft-orange {
+    color: rgb(255, 118, 84);
+    font-size: 16px;
+    padding: 0 20px;
+    margin: 0;
+  }
+  .nft-gray-small {
+    color: rgb(90, 90, 90);
+    font-size: 16px;
+    padding: 0 20px;
+    margin: 0;
+  }
+  .nft-gray-big {
+    color: rgb(90, 90, 90);
+    font-size: 22px;
+    padding: 0 20px;
+    margin: 0;
+  }
+  .nft-black {
+    color: rgb(26, 26, 26);
+    font-size: 25px;
+    padding: 0 20px;
+    margin: 0;
+    font-weight: 500;
+  }
+  footer img {
+    margin-top: 30px;
+    width: 50%;
+  }
+  footer p {
+    font-size: 26px;
+    color: rgb(90, 90, 90);
+  }
+  footer i {
+    font-size: 22px;
+    color: rgb(151, 151, 151);
+    padding-right: 15px;
+    margin-bottom: 30px;
+  }
+  footer h6 {
+    font-size: 22px;
+    color: rgb(90, 90, 90);
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+  }
+  footer a {
+    font-size: 22px;
+    color: rgb(90, 90, 90);
+    margin-bottom: 15px;
+    text-decoration: none;
+  }
+  footer h5 {
+    font-size: 25px;
+    color: rgb(151, 151, 151);
+    margin-bottom: 70px;
+    letter-spacing: 2px;
+    font-weight: 400;
+  }
+  .mobile-grid-col-2 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+  }
+  .mobile-grid-col-2-90-10 {
+    grid-template-columns: 90% 10%;
+    grid-auto-rows: auto;
+  }
+  .imagePosition {
+    position: absolute;
+    height: 86%;
+    width: -moz-max-content;
+    width: max-content;
+    top: -10%;
+    left: -450%;
+  }
+  .imagePosition2 {
+    position: absolute;
+    height: 80%;
+    width: -moz-max-content;
+    width: max-content;
+    left: -320%;
+    bottom: -0.1%;
+  }
+  #section4 {
+    padding-bottom: 0;
+  }
+  #section4 button {
+    margin-bottom: 70px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hideOnDesktop {
+    display: none;
+  }
+  header img {
+    width: 200px;
+  }
+  nav a {
+    text-decoration: none;
+    font-size: 25px;
+    padding-left: 25px;
+    color: rgb(90, 90, 90);
+  }
+  .pink {
+    color: rgb(255, 0, 170);
+    font-weight: normal;
+    letter-spacing: 2px;
+    font-size: 25px;
+  }
+  header, section, footer {
+    padding: 100px;
+  }
+  #section1 {
+    margin-bottom: 150px;
+  }
+  #section1 h6 {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  #section1 h1 {
+    font-size: 100px;
+    font-weight: 900;
+    margin: 20px 0;
+    width: 75%;
+  }
+  #section1 p {
+    font-size: 21px;
+    width: 75%;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+  #section1 button {
+    margin-bottom: 75px;
+  }
+  button {
+    width: 25%;
+    height: 74px;
+    background: linear-gradient(#fff, #fff) padding-box, linear-gradient(75deg, rgb(240, 116, 137), rgb(255, 118, 84), rgb(205, 229, 166)) border-box;
+    color: #313149;
+    padding: 10px;
+    border: 4px solid transparent;
+    border-radius: 75px;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  #section2 {
+    padding: 120px 60px 40px;
+    background-image: url("assets/images/background.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    margin: 0 100px;
+    border-radius: 20px;
+  }
+  #section2 h2 {
+    padding-top: 20px;
+    margin-bottom: 20px;
+    font-size: 40px;
+  }
+  #section2 p {
+    margin-top: 0;
+    font-size: 22px;
+  }
+  .desktopDisplayFlex {
+    display: flex;
+  }
+  .flex-row {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #section3 {
+    height: auto;
+    padding: 100px 0;
+    margin: 0 100px;
+  }
+  #section3 h2 {
+    font-size: 46px;
+    margin-top: 100px;
+    margin-bottom: 18px;
+  }
+  .p-sec3 {
+    font-size: 23px;
+    margin-top: 0;
+  }
+  .nft-orange {
+    color: rgb(255, 118, 84);
+    font-size: 16px;
+    padding: 0 20px;
+    margin: 10px 0 0;
+    font-weight: bold;
+  }
+  .nft-gray-small {
+    color: rgb(151, 151, 151);
+    font-size: 16px;
+    padding: 0 20px;
+    margin: 10px 0 0;
+    font-weight: bold;
+  }
+  .nft-gray-big {
+    color: rgb(90, 90, 90);
+    font-size: 20px;
+    padding: 0 20px;
+    margin: 0;
+  }
+  .nft-black {
+    color: rgb(26, 26, 26);
+    font-size: 22px;
+    padding: 0 20px;
+    margin: 0;
+    font-weight: 500;
+  }
+  .nft-black:first-of-type {
+    padding-left: 5px;
+  }
+  .card {
+    background-color: rgb(233, 233, 233);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-bottom: 15px;
+  }
+  #section4 h6 {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  #section4 h1 {
+    font-size: 62px;
+    font-weight: 900;
+    margin: 20px 0;
+    width: 90%;
+  }
+  #section4 p {
+    font-size: 21px;
+    width: 75%;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+  .imagePosition2 {
+    position: absolute;
+    width: 14%;
+    top: 134px;
+    right: 400px;
+  }
+  footer img {
+    margin-top: 30px;
+  }
+  footer p {
+    font-size: 22px;
+    color: rgb(90, 90, 90);
+    margin-top: 10px;
+  }
+  footer i {
+    font-size: 22px;
+    color: rgb(151, 151, 151);
+    padding-right: 15px;
+    margin-bottom: 30px;
+  }
+  footer h6 {
+    font-size: 22px;
+    color: rgb(90, 90, 90);
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+  }
+  footer a {
+    font-size: 22px;
+    color: rgb(90, 90, 90);
+    margin-bottom: 15px;
+    text-decoration: none;
+  }
+  footer h5 {
+    font-size: 22px;
+    color: rgb(151, 151, 151);
+    margin-bottom: 70px;
+    letter-spacing: 2px;
+    font-weight: 400;
+  }
+  .desktop-grid-col-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-rows: auto;
+    gap: 30px;
+  }
+  #section4 {
+    padding: 100px 0 0;
+    margin: 0 100px;
+  }
+  #section4 button {
+    margin-bottom: 140px;
+  }
+  .desktopDisplayGrid {
+    display: grid;
+  }
+  .desktop-grid-col-2 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+  }
+  .imagePosition {
+    position: absolute;
+    height: 130%;
+    width: 130%;
+    top: -10%;
+    right: 0;
+  }
+  .imagePosition2 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+  }
+}/*# sourceMappingURL=style.css.map */
