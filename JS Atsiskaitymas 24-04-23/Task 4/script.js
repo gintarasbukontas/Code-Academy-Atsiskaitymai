@@ -37,7 +37,4 @@ async function showCars() {
     carModels.classList.add("carModels");
   });
 }
-
-window.onload = function () {
-  showCars();
-};
+showCars();
