@@ -82,25 +82,31 @@ export async function updateCompanyProfile(req, res) {
     const companyProfile = await CompanyProfile.findById(id);
 
     if (companyProfile) {
-      if (founder && typeof founder === "string") {
-        companyProfile.founder = founder;
-      } else {
-        res.status(400).json({ error: "founder is not a string" });
-        return;
+      if (founder) {
+        if (typeof founder === "string") {
+          companyProfile.founder = founder;
+        } else {
+          res.status(400).json({ error: "founder is not a string" });
+          return;
+        }
       }
 
-      if (foundedYear && typeof foundedYear === "number") {
-        companyProfile.foundedYear = foundedYear;
-      } else {
-        res.status(400).json({ error: "foundedYear is not a number" });
-        return;
+      if (foundedYear) {
+        if (typeof foundedYear === "number") {
+          companyProfile.foundedYear = foundedYear;
+        } else {
+          res.status(400).json({ error: "foundedYear is not a number" });
+          return;
+        }
       }
 
-      if (numberOfEmployees && typeof numberOfEmployees === "number") {
-        companyProfile.numberOfEmployees = numberOfEmployees;
-      } else {
-        res.status(400).json({ error: "numberOfEmployees is not a number" });
-        return;
+      if (numberOfEmployees) {
+        if (typeof numberOfEmployees === "number") {
+          companyProfile.numberOfEmployees = numberOfEmployees;
+        } else {
+          res.status(400).json({ error: "numberOfEmployees is not a number" });
+          return;
+        }
       }
 
       await companyProfile.save();

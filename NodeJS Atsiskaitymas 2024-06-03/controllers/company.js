@@ -83,25 +83,31 @@ export async function updateCompany(req, res) {
     const company = await Company.findById(id);
 
     if (company) {
-      if (name && typeof name === "string") {
-        company.name = name;
-      } else {
-        res.status(400).json({ error: "name is not a string" });
-        return;
+      if (name) {
+        if (typeof name === "string") {
+          company.name = name;
+        } else {
+          res.status(400).json({ error: "name is not a string" });
+          return;
+        }
       }
 
-      if (industry && typeof industry === "string") {
-        company.industry = industry;
-      } else {
-        res.status(400).json({ error: "industry is not a string" });
-        return;
+      if (industry) {
+        if (typeof industry === "string") {
+          company.industry = industry;
+        } else {
+          res.status(400).json({ error: "industry is not a string" });
+          return;
+        }
       }
 
-      if (location && typeof location === "string") {
-        company.location = location;
-      } else {
-        res.status(400).json({ error: "location is not a string" });
-        return;
+      if (location) {
+        if (typeof location === "string") {
+          company.location = location;
+        } else {
+          res.status(400).json({ error: "location is not a string" });
+          return;
+        }
       }
 
       await company.save();
